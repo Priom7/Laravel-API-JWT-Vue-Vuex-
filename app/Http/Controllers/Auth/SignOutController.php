@@ -9,8 +9,9 @@ class SignOutController extends Controller
 {
     //
 
+
     public function __invoke()
     {
-        dd('dello');
+        // auth()=>logout();
     }
 }

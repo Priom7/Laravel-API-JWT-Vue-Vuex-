@@ -17,6 +17,10 @@ class MeController extends Controller
 
     public function __invoke(Request $request)
     {
-        dd($request->user());
+        $user = $request->user();
+        return response()->json([
+            'email' => $user->email,
+            'name' => $user->name,
+        ]);
     }
 }
