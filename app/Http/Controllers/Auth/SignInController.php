@@ -17,6 +17,6 @@ class SignInController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        return response()->json(['success' => 'Logged In', 'token :' => $token], 200);
+        return response()->json(compact('token'));
     }
 }
